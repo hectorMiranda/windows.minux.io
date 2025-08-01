@@ -2,7 +2,7 @@
 
 #include <windows.h>
 
-const char CLASS_NAME[] = "MinuxClient";
+const char CLASS_NAME[] = "MinuxRTOSWidget";
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
     switch (uMsg) {
@@ -33,7 +33,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int) {
 
     HWND hwnd = CreateWindowEx(
         WS_EX_LAYERED | WS_EX_TOPMOST | WS_EX_TOOLWINDOW,
-        CLASS_NAME, "Minux Client",
+        CLASS_NAME, "Minux RTOS",
         WS_POPUP,
         100, 100, 300, 100,
         NULL, NULL, hInstance, NULL
