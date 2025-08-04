@@ -1,4 +1,4 @@
-// minux-client: a minimal customizable widget for Windows
+// minux-rot: a minimal customizable widget for Windows for Minux RTOS
 
 #include <windows.h>
 
