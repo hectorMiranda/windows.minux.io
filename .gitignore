@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/windows.minux.io/copilot-chat/733a44e9/sessions
+/.vs/windows.minux.io/FileContentIndex
+/.vs/windows.minux.io/CopilotIndices/17.14.939.21063
+/.vs/windows.minux.io/v17/ipch/AutoPCH
+x64
+
