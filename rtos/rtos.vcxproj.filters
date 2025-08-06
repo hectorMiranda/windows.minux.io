@@ -27,9 +27,15 @@
     <ClInclude Include="rtos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="minux_ui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="rtos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="minux_system.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
