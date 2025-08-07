@@ -393,44 +393,34 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
     case WM_PAINT: {
         PAINTSTRUCT ps;
         HDC hdc = BeginPaint(hwnd, &ps);
-        
-        // Modern gradient background
-        RECT clientRect;
-        GetClientRect(hwnd, &clientRect);
-        
-        // Create gradient brush
-        HBRUSH hBrush = CreateSolidBrush(COLOR_BACKGROUND);
-        FillRect(hdc, &clientRect, hBrush);
-        DeleteObject(hBrush);
-        
-        // Title bar
-        RECT titleRect = {0, 0, clientRect.right, 40};
-        HBRUSH hTitleBrush = CreateSolidBrush(COLOR_SECONDARY);
-        FillRect(hdc, &titleRect, hTitleBrush);
-        DeleteObject(hTitleBrush);
-        
-        // Title text
+
+        // Create a custom font (e.g., 24pt, bold, Arial)
+        HFONT hFont = CreateFont(
+            24,                // Height
+            0,                 // Width (0 = default)
+            0,                 // Escapement
+            0,                 // Orientation
+            FW_BOLD,           // Weight
+            FALSE,             // Italic
+            FALSE,             // Underline
+            FALSE,             // StrikeOut
+            ANSI_CHARSET,      // Charset
+            OUT_DEFAULT_PRECIS,// OutputPrecision
+            CLIP_DEFAULT_PRECIS,// ClipPrecision
+            DEFAULT_QUALITY,   // Quality
+            DEFAULT_PITCH | FF_SWISS, // PitchAndFamily
+            "Arial"            // Facename
+        );
+        HFONT hOldFont = (HFONT)SelectObject(hdc, hFont);
+
         SetBkMode(hdc, TRANSPARENT);
-        SetTextColor(hdc, COLOR_TEXT);
-        HFONT hTitleFont = CreateFont(16, 0, 0, 0, FW_BOLD, FALSE, FALSE, FALSE,
-                                     DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
-                                     CLEARTYPE_QUALITY, DEFAULT_PITCH | FF_DONTCARE, L"Segoe UI");
-        HFONT hOldFont = (HFONT)SelectObject(hdc, hTitleFont);
-        
-        TextOut(hdc, 15, 12, L"Minux RTOS Control Center", 25);
-        
-        // Version info
-        HFONT hSmallFont = CreateFont(12, 0, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE,
-                                     DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
-                                     CLEARTYPE_QUALITY, DEFAULT_PITCH | FF_DONTCARE, L"Segoe UI");
-        SelectObject(hdc, hSmallFont);
-        SetTextColor(hdc, RGB(180, 180, 180));
-        TextOut(hdc, 250, 15, L"v2.1.0 - Real-time OS", 21);
-        
+        SetTextColor(hdc, RGB(255, 255, 255));
+        TextOut(hdc, 20, 20, "Minux Client Widget", 21);
+
+        // Restore and clean up
         SelectObject(hdc, hOldFont);
-        DeleteObject(hTitleFont);
-        DeleteObject(hSmallFont);
-        
+        DeleteObject(hFont);
+
         EndPaint(hwnd, &ps);
         return 0;
     }

@@ -1,12 +1,117 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\marcetux\\windows.minux.io\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AF696ECB-4FAD-4FC2-A61E-5086ED1765DE}|rtos\\rtos.vcxproj|C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       % \u0087 )$  \u0022     ",
+      "RelativeMoniker": "D:0:0:{AF696ECB-4FAD-4FC2-A61E-5086ED1765DE}|rtos\\rtos.vcxproj|solutionrelative:rtos\\rtos.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       % \u0087 )$  \u0022     "
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF696ECB-4FAD-4FC2-A61E-5086ED1765DE}|rtos\\rtos.vcxproj|C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       ) \u008D )$  \u0022     ",
+      "RelativeMoniker": "D:0:0:{AF696ECB-4FAD-4FC2-A61E-5086ED1765DE}|rtos\\rtos.vcxproj|solutionrelative:rtos\\rtos.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       ) \u008D )$  \u0022     "
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF696ECB-4FAD-4FC2-A61E-5086ED1765DE}|rtos\\rtos.vcxproj|C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       \u011F ! )$  \u0022     ",
+      "RelativeMoniker": "D:0:0:{AF696ECB-4FAD-4FC2-A61E-5086ED1765DE}|rtos\\rtos.vcxproj|solutionrelative:rtos\\rtos.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       \u011F ! )$  \u0022     "
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF696ECB-4FAD-4FC2-A61E-5086ED1765DE}|rtos\\rtos.vcxproj|C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       $ \u008D )$  \u0022     ",
+      "RelativeMoniker": "D:0:0:{AF696ECB-4FAD-4FC2-A61E-5086ED1765DE}|rtos\\rtos.vcxproj|solutionrelative:rtos\\rtos.rc||{177559E0-D141-11D0-92DF-00A0C9138C45}|,   b e g i n       $ \u008D )$  \u0022     "
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\marcetux\\windows.minux.io\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF696ECB-4FAD-4FC2-A61E-5086ED1765DE}|rtos\\rtos.vcxproj|C:\\marcetux\\windows.minux.io\\rtos\\minux_system.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AF696ECB-4FAD-4FC2-A61E-5086ED1765DE}|rtos\\rtos.vcxproj|solutionrelative:rtos\\minux_system.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "rtos.rc - String Table",
+              "DocumentMoniker": "C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc",
+              "RelativeDocumentMoniker": "rtos\\rtos.rc",
+              "ToolTip": "C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc - String Table",
+              "RelativeToolTip": "rtos\\rtos.rc - String Table",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-08-07T04:43:00.907Z",
+              "EditorCaption": " - String Table"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "rtos.rc - IDC_RTOS - Menu",
+              "DocumentMoniker": "C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc",
+              "RelativeDocumentMoniker": "rtos\\rtos.rc",
+              "ToolTip": "C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc - IDC_RTOS - Menu",
+              "RelativeToolTip": "rtos\\rtos.rc - IDC_RTOS - Menu",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-08-07T04:42:42.795Z",
+              "EditorCaption": " - IDC_RTOS - Menu"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\marcetux\\windows.minux.io\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\marcetux\\windows.minux.io\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAALkBAAAAAAAAAAAAAL8BAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-06T03:57:48.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "rtos.rc - IDD_ABOUTBOX - Dialog",
+              "DocumentMoniker": "C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc",
+              "RelativeDocumentMoniker": "rtos\\rtos.rc",
+              "ToolTip": "C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc - IDD_ABOUTBOX - Dialog",
+              "RelativeToolTip": "rtos\\rtos.rc - IDD_ABOUTBOX - Dialog",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-08-06T03:52:08.132Z",
+              "EditorCaption": " - IDD_ABOUTBOX - Dialog"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "rtos.rc - IDC_RTOS - Accelerator",
+              "DocumentMoniker": "C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc",
+              "RelativeDocumentMoniker": "rtos\\rtos.rc",
+              "ToolTip": "C:\\marcetux\\windows.minux.io\\rtos\\rtos.rc - IDC_RTOS - Accelerator",
+              "RelativeToolTip": "rtos\\rtos.rc - IDC_RTOS - Accelerator",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-08-06T03:52:00.601Z",
+              "EditorCaption": " - IDC_RTOS - Accelerator"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "minux_system.cpp",
+              "DocumentMoniker": "C:\\marcetux\\windows.minux.io\\rtos\\minux_system.cpp",
+              "RelativeDocumentMoniker": "rtos\\minux_system.cpp",
+              "ToolTip": "C:\\marcetux\\windows.minux.io\\rtos\\minux_system.cpp",
+              "RelativeToolTip": "rtos\\minux_system.cpp",
+              "ViewState": "AgIAABMBAAAAAAAAAIAwwB8BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-06T02:42:58.117Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
