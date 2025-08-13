@@ -1,0 +1,5 @@
+# local scratch
+*.local.json
+.cache/
+dist/
+node_modules/
