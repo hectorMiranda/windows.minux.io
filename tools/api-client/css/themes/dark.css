@@ -1,0 +1,8 @@
+:root,[data-theme="dark"]{
+  --bg:#0b1220; --surface:#0e1726; --border:#1e2c44;
+  --fg:#dbe6f5; --fg-dim:#8aa0bd;
+  --accent:#4cc2ff;
+  --input:#0a1322; --btn:#16233a; --btn-hover:#1f3050;
+  --m-get:#5bd6a0; --m-post:#e8c468; --m-put:#7aa2ff; --m-patch:#c79bff; --m-delete:#ff7a85;
+  --ok:#5bd6a0; --warn:#e8c468; --err:#ff7a85;
+}
