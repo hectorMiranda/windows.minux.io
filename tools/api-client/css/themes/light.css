@@ -1,0 +1,9 @@
+/* Light theme */
+[data-theme="light"]{
+  --bg:#f5f7fb; --surface:#ffffff; --border:#dfe5ee;
+  --fg:#1b2735; --fg-dim:#5d6b7e;
+  --accent:#0a84ff;
+  --input:#ffffff; --btn:#eef2f8; --btn-hover:#e2e8f2;
+  --m-get:#1c9e6b; --m-post:#b07d12; --m-put:#2f5fd0; --m-patch:#7a3fd0; --m-delete:#d23c4a;
+  --ok:#1c9e6b; --warn:#b07d12; --err:#d23c4a;
+}
