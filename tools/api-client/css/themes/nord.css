@@ -1,0 +1,9 @@
+/* Nord theme */
+[data-theme="nord"]{
+  --bg:#2e3440; --surface:#3b4252; --border:#434c5e;
+  --fg:#eceff4; --fg-dim:#a9b3c4;
+  --accent:#88c0d0;
+  --input:#2e3440; --btn:#434c5e; --btn-hover:#4c566a;
+  --m-get:#a3be8c; --m-post:#ebcb8b; --m-put:#81a1c1; --m-patch:#b48ead; --m-delete:#bf616a;
+  --ok:#a3be8c; --warn:#ebcb8b; --err:#bf616a;
+}
