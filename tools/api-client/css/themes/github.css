@@ -1,0 +1,9 @@
+/* GitHub Light theme */
+[data-theme="github"]{
+  --bg:#ffffff; --surface:#f6f8fa; --border:#d0d7de;
+  --fg:#1f2328; --fg-dim:#636c76;
+  --accent:#0969da;
+  --input:#ffffff; --btn:#f6f8fa; --btn-hover:#eaeef2;
+  --m-get:#1a7f37; --m-post:#9a6700; --m-put:#0969da; --m-patch:#8250df; --m-delete:#cf222e;
+  --ok:#1a7f37; --warn:#9a6700; --err:#cf222e;
+}
