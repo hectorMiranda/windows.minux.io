@@ -1,0 +1,9 @@
+/* Gruvbox theme */
+[data-theme="gruvbox"]{
+  --bg:#282828; --surface:#32302f; --border:#3c3836;
+  --fg:#ebdbb2; --fg-dim:#a89984;
+  --accent:#83a598;
+  --input:#1d2021; --btn:#3c3836; --btn-hover:#504945;
+  --m-get:#b8bb26; --m-post:#fabd2f; --m-put:#83a598; --m-patch:#d3869b; --m-delete:#fb4934;
+  --ok:#b8bb26; --warn:#fabd2f; --err:#fb4934;
+}
