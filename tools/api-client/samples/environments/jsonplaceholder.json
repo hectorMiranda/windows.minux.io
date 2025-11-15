@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "jsonplaceholder",
+  "name": "JSONPlaceholder",
+  "values": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://jsonplaceholder.typicode.com"
+    }
+  ]
+}
