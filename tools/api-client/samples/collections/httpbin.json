@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "httpbin",
+  "type": "collection",
+  "name": "httpbin",
+  "description": "Test endpoints against httpbin.org.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://httpbin.org"
+    }
+  ],
+  "children": [
+    {
+      "id": "get-ip",
+      "type": "request",
+      "name": "GET ip",
+      "method": "GET",
+      "url": "{{base_url}}/ip",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "get-headers",
+      "type": "request",
+      "name": "GET headers",
+      "method": "GET",
+      "url": "{{base_url}}/headers",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "post-anything",
+      "type": "request",
+      "name": "POST anything",
+      "method": "POST",
+      "url": "{{base_url}}/anything",
+      "params": [],
+      "headers": [
+        {
+          "enabled": true,
+          "key": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "raw": "{\"hello\": \"world\"}"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "status-404",
+      "type": "request",
+      "name": "Status 404",
+      "method": "GET",
+      "url": "{{base_url}}/status/404",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "delay-2s",
+      "type": "request",
+      "name": "Delay 2s",
+      "method": "GET",
+      "url": "{{base_url}}/delay/2",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
