@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "github",
+  "name": "GitHub API",
+  "values": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://api.github.com"
+    },
+    {
+      "enabled": true,
+      "key": "token",
+      "value": "{{GITHUB_TOKEN}}"
+    }
+  ]
+}
