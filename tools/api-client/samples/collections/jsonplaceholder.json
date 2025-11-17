@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "id": "jsonplaceholder",
+  "type": "collection",
+  "name": "JSONPlaceholder",
+  "description": "Fake REST API for prototyping.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://jsonplaceholder.typicode.com"
+    }
+  ],
+  "children": [
+    {
+      "id": "list-posts",
+      "type": "request",
+      "name": "List posts",
+      "method": "GET",
+      "url": "{{base_url}}/posts",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "get-post",
+      "type": "request",
+      "name": "Get post",
+      "method": "GET",
+      "url": "{{base_url}}/posts/1",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "create-post",
+      "type": "request",
+      "name": "Create post",
+      "method": "POST",
+      "url": "{{base_url}}/posts",
+      "params": [],
+      "headers": [
+        {
+          "enabled": true,
+          "key": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "raw": "{\"title\": \"foo\", \"body\": \"bar\", \"userId\": 1}"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "update-post",
+      "type": "request",
+      "name": "Update post",
+      "method": "PUT",
+      "url": "{{base_url}}/posts/1",
+      "params": [],
+      "headers": [
+        {
+          "enabled": true,
+          "key": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "raw": "{\"id\": 1, \"title\": \"updated\"}"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "delete-post",
+      "type": "request",
+      "name": "Delete post",
+      "method": "DELETE",
+      "url": "{{base_url}}/posts/1",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "post-comments",
+      "type": "request",
+      "name": "Post comments",
+      "method": "GET",
+      "url": "{{base_url}}/posts/1/comments",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
