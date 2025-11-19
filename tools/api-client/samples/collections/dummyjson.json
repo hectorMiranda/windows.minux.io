@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "dummyjson",
+  "type": "collection",
+  "name": "DummyJSON",
+  "description": "Sample requests for DummyJSON.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://dummyjson.com"
+    }
+  ],
+  "children": [
+    {
+      "id": "list-products",
+      "type": "request",
+      "name": "List products",
+      "method": "GET",
+      "url": "{{base_url}}/products",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "search",
+      "type": "request",
+      "name": "Search",
+      "method": "GET",
+      "url": "{{base_url}}/products/search?q=phone",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "single-product",
+      "type": "request",
+      "name": "Single product",
+      "method": "GET",
+      "url": "{{base_url}}/products/1",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "add-product",
+      "type": "request",
+      "name": "Add product",
+      "method": "POST",
+      "url": "{{base_url}}/products/add",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
