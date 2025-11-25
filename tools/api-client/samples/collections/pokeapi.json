@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "pokeapi",
+  "type": "collection",
+  "name": "PokeAPI",
+  "description": "Sample requests for PokeAPI.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://pokeapi.co/api/v2"
+    }
+  ],
+  "children": [
+    {
+      "id": "pokemon",
+      "type": "request",
+      "name": "Pokemon",
+      "method": "GET",
+      "url": "{{base_url}}/pokemon/ditto",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "list",
+      "type": "request",
+      "name": "List",
+      "method": "GET",
+      "url": "{{base_url}}/pokemon?limit=20",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "berry",
+      "type": "request",
+      "name": "Berry",
+      "method": "GET",
+      "url": "{{base_url}}/berry/1",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
