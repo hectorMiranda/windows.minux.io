@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "agify",
+  "type": "collection",
+  "name": "Agify",
+  "description": "Sample requests for Agify.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://api.agify.io"
+    }
+  ],
+  "children": [
+    {
+      "id": "predict-age",
+      "type": "request",
+      "name": "Predict age",
+      "method": "GET",
+      "url": "{{base_url}}/?name=michael",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
