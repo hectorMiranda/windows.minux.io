@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "dogapi",
+  "type": "collection",
+  "name": "Dog CEO",
+  "description": "Sample requests for Dog CEO.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://dog.ceo/api"
+    }
+  ],
+  "children": [
+    {
+      "id": "random",
+      "type": "request",
+      "name": "Random",
+      "method": "GET",
+      "url": "{{base_url}}/breeds/image/random",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "breeds",
+      "type": "request",
+      "name": "Breeds",
+      "method": "GET",
+      "url": "{{base_url}}/breeds/list/all",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
