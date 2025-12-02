@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "spacexdata",
+  "type": "collection",
+  "name": "SpaceX",
+  "description": "Sample requests for SpaceX.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://api.spacexdata.com/v4"
+    }
+  ],
+  "children": [
+    {
+      "id": "latest-launch",
+      "type": "request",
+      "name": "Latest launch",
+      "method": "GET",
+      "url": "{{base_url}}/launches/latest",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "rockets",
+      "type": "request",
+      "name": "Rockets",
+      "method": "GET",
+      "url": "{{base_url}}/rockets",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "crew",
+      "type": "request",
+      "name": "Crew",
+      "method": "GET",
+      "url": "{{base_url}}/crew",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
