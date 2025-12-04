@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "exchangerate",
+  "type": "collection",
+  "name": "Exchange Rate",
+  "description": "Sample requests for Exchange Rate.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://open.er-api.com/v6"
+    }
+  ],
+  "children": [
+    {
+      "id": "usd-rates",
+      "type": "request",
+      "name": "USD rates",
+      "method": "GET",
+      "url": "{{base_url}}/latest/USD",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
