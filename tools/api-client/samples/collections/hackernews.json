@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "hackernews",
+  "type": "collection",
+  "name": "Hacker News",
+  "description": "Sample requests for Hacker News.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://hacker-news.firebaseio.com/v0"
+    }
+  ],
+  "children": [
+    {
+      "id": "top-stories",
+      "type": "request",
+      "name": "Top stories",
+      "method": "GET",
+      "url": "{{base_url}}/topstories.json",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "item",
+      "type": "request",
+      "name": "Item",
+      "method": "GET",
+      "url": "{{base_url}}/item/8863.json",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
