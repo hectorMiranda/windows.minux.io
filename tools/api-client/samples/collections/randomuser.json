@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "randomuser",
+  "type": "collection",
+  "name": "Random User",
+  "description": "Sample requests for Random User.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://randomuser.me/api"
+    }
+  ],
+  "children": [
+    {
+      "id": "one-user",
+      "type": "request",
+      "name": "One user",
+      "method": "GET",
+      "url": "{{base_url}}/",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "five-users",
+      "type": "request",
+      "name": "Five users",
+      "method": "GET",
+      "url": "{{base_url}}/?results=5",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
