@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "frankfurter",
+  "type": "collection",
+  "name": "Frankfurter FX",
+  "description": "Sample requests for Frankfurter FX.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://api.frankfurter.app"
+    }
+  ],
+  "children": [
+    {
+      "id": "latest",
+      "type": "request",
+      "name": "Latest",
+      "method": "GET",
+      "url": "{{base_url}}/latest",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "convert",
+      "type": "request",
+      "name": "Convert",
+      "method": "GET",
+      "url": "{{base_url}}/latest?from=USD&to=EUR",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
