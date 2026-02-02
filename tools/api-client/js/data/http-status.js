@@ -5,5 +5,6 @@ export const HTTP_STATUS = [
   {"code": 103, "text": "Early Hints", "class": "informational"},
   {"code": 200, "text": "OK", "class": "success"},
   {"code": 201, "text": "Created", "class": "success"},
-  {"code": 202, "text": "Accepted", "class": "success"}
+  {"code": 202, "text": "Accepted", "class": "success"},
+  {"code": 203, "text": "Non-Authoritative Information", "class": "success"}
 ];
