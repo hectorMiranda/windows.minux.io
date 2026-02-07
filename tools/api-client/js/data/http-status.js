@@ -10,5 +10,6 @@ export const HTTP_STATUS = [
   {"code": 204, "text": "No Content", "class": "success"},
   {"code": 205, "text": "Reset Content", "class": "success"},
   {"code": 206, "text": "Partial Content", "class": "success"},
-  {"code": 207, "text": "Multi-Status", "class": "success"}
+  {"code": 207, "text": "Multi-Status", "class": "success"},
+  {"code": 208, "text": "Already Reported", "class": "success"}
 ];
