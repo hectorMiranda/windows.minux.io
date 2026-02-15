@@ -18,5 +18,6 @@ export const HTTP_STATUS = [
   {"code": 302, "text": "Found", "class": "redirection"},
   {"code": 303, "text": "See Other", "class": "redirection"},
   {"code": 304, "text": "Not Modified", "class": "redirection"},
-  {"code": 307, "text": "Temporary Redirect", "class": "redirection"}
+  {"code": 307, "text": "Temporary Redirect", "class": "redirection"},
+  {"code": 308, "text": "Permanent Redirect", "class": "redirection"}
 ];
