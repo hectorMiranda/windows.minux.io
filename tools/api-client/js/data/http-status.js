@@ -25,5 +25,6 @@ export const HTTP_STATUS = [
   {"code": 402, "text": "Payment Required", "class": "client-error"},
   {"code": 403, "text": "Forbidden", "class": "client-error"},
   {"code": 404, "text": "Not Found", "class": "client-error"},
-  {"code": 405, "text": "Method Not Allowed", "class": "client-error"}
+  {"code": 405, "text": "Method Not Allowed", "class": "client-error"},
+  {"code": 406, "text": "Not Acceptable", "class": "client-error"}
 ];
