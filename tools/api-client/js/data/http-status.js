@@ -28,5 +28,6 @@ export const HTTP_STATUS = [
   {"code": 405, "text": "Method Not Allowed", "class": "client-error"},
   {"code": 406, "text": "Not Acceptable", "class": "client-error"},
   {"code": 407, "text": "Proxy Authentication Required", "class": "client-error"},
-  {"code": 408, "text": "Request Timeout", "class": "client-error"}
+  {"code": 408, "text": "Request Timeout", "class": "client-error"},
+  {"code": 409, "text": "Conflict", "class": "client-error"}
 ];
