@@ -32,5 +32,6 @@ export const HTTP_STATUS = [
   {"code": 409, "text": "Conflict", "class": "client-error"},
   {"code": 410, "text": "Gone", "class": "client-error"},
   {"code": 411, "text": "Length Required", "class": "client-error"},
-  {"code": 412, "text": "Precondition Failed", "class": "client-error"}
+  {"code": 412, "text": "Precondition Failed", "class": "client-error"},
+  {"code": 413, "text": "Payload Too Large", "class": "client-error"}
 ];
