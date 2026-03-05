@@ -36,5 +36,6 @@ export const HTTP_STATUS = [
   {"code": 413, "text": "Payload Too Large", "class": "client-error"},
   {"code": 414, "text": "URI Too Long", "class": "client-error"},
   {"code": 415, "text": "Unsupported Media Type", "class": "client-error"},
-  {"code": 416, "text": "Range Not Satisfiable", "class": "client-error"}
+  {"code": 416, "text": "Range Not Satisfiable", "class": "client-error"},
+  {"code": 417, "text": "Expectation Failed", "class": "client-error"}
 ];
