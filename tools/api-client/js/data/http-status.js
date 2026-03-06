@@ -38,5 +38,6 @@ export const HTTP_STATUS = [
   {"code": 415, "text": "Unsupported Media Type", "class": "client-error"},
   {"code": 416, "text": "Range Not Satisfiable", "class": "client-error"},
   {"code": 417, "text": "Expectation Failed", "class": "client-error"},
-  {"code": 418, "text": "I'm a teapot", "class": "client-error"}
+  {"code": 418, "text": "I'm a teapot", "class": "client-error"},
+  {"code": 421, "text": "Misdirected Request", "class": "client-error"}
 ];
