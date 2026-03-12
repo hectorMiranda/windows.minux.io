@@ -43,5 +43,6 @@ export const HTTP_STATUS = [
   {"code": 422, "text": "Unprocessable Entity", "class": "client-error"},
   {"code": 423, "text": "Locked", "class": "client-error"},
   {"code": 424, "text": "Failed Dependency", "class": "client-error"},
-  {"code": 425, "text": "Too Early", "class": "client-error"}
+  {"code": 425, "text": "Too Early", "class": "client-error"},
+  {"code": 426, "text": "Upgrade Required", "class": "client-error"}
 ];
