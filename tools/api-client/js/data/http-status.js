@@ -45,5 +45,6 @@ export const HTTP_STATUS = [
   {"code": 424, "text": "Failed Dependency", "class": "client-error"},
   {"code": 425, "text": "Too Early", "class": "client-error"},
   {"code": 426, "text": "Upgrade Required", "class": "client-error"},
-  {"code": 428, "text": "Precondition Required", "class": "client-error"}
+  {"code": 428, "text": "Precondition Required", "class": "client-error"},
+  {"code": 429, "text": "Too Many Requests", "class": "client-error"}
 ];
