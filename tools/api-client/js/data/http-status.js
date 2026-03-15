@@ -47,5 +47,6 @@ export const HTTP_STATUS = [
   {"code": 426, "text": "Upgrade Required", "class": "client-error"},
   {"code": 428, "text": "Precondition Required", "class": "client-error"},
   {"code": 429, "text": "Too Many Requests", "class": "client-error"},
-  {"code": 431, "text": "Request Header Fields Too Large", "class": "client-error"}
+  {"code": 431, "text": "Request Header Fields Too Large", "class": "client-error"},
+  {"code": 451, "text": "Unavailable For Legal Reasons", "class": "client-error"}
 ];
