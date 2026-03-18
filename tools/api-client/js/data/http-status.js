@@ -49,5 +49,6 @@ export const HTTP_STATUS = [
   {"code": 429, "text": "Too Many Requests", "class": "client-error"},
   {"code": 431, "text": "Request Header Fields Too Large", "class": "client-error"},
   {"code": 451, "text": "Unavailable For Legal Reasons", "class": "client-error"},
-  {"code": 500, "text": "Internal Server Error", "class": "server-error"}
+  {"code": 500, "text": "Internal Server Error", "class": "server-error"},
+  {"code": 501, "text": "Not Implemented", "class": "server-error"}
 ];
