@@ -51,5 +51,6 @@ export const HTTP_STATUS = [
   {"code": 451, "text": "Unavailable For Legal Reasons", "class": "client-error"},
   {"code": 500, "text": "Internal Server Error", "class": "server-error"},
   {"code": 501, "text": "Not Implemented", "class": "server-error"},
-  {"code": 502, "text": "Bad Gateway", "class": "server-error"}
+  {"code": 502, "text": "Bad Gateway", "class": "server-error"},
+  {"code": 503, "text": "Service Unavailable", "class": "server-error"}
 ];
