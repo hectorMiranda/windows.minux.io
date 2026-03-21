@@ -53,5 +53,6 @@ export const HTTP_STATUS = [
   {"code": 501, "text": "Not Implemented", "class": "server-error"},
   {"code": 502, "text": "Bad Gateway", "class": "server-error"},
   {"code": 503, "text": "Service Unavailable", "class": "server-error"},
-  {"code": 504, "text": "Gateway Timeout", "class": "server-error"}
+  {"code": 504, "text": "Gateway Timeout", "class": "server-error"},
+  {"code": 505, "text": "HTTP Version Not Supported", "class": "server-error"}
 ];
