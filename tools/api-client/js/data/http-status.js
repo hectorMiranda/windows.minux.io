@@ -56,5 +56,6 @@ export const HTTP_STATUS = [
   {"code": 504, "text": "Gateway Timeout", "class": "server-error"},
   {"code": 505, "text": "HTTP Version Not Supported", "class": "server-error"},
   {"code": 506, "text": "Variant Also Negotiates", "class": "server-error"},
-  {"code": 507, "text": "Insufficient Storage", "class": "server-error"}
+  {"code": 507, "text": "Insufficient Storage", "class": "server-error"},
+  {"code": 508, "text": "Loop Detected", "class": "server-error"}
 ];
