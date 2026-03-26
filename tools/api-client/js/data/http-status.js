@@ -58,5 +58,6 @@ export const HTTP_STATUS = [
   {"code": 506, "text": "Variant Also Negotiates", "class": "server-error"},
   {"code": 507, "text": "Insufficient Storage", "class": "server-error"},
   {"code": 508, "text": "Loop Detected", "class": "server-error"},
-  {"code": 510, "text": "Not Extended", "class": "server-error"}
+  {"code": 510, "text": "Not Extended", "class": "server-error"},
+  {"code": 511, "text": "Network Authentication Required", "class": "server-error"}
 ];
