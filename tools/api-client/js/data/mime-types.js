@@ -3,5 +3,6 @@ export const MIME_TYPES = [
   {"ext": "xml", "type": "application/xml"},
   {"ext": "html", "type": "text/html"},
   {"ext": "htm", "type": "text/html"},
-  {"ext": "txt", "type": "text/plain"}
+  {"ext": "txt", "type": "text/plain"},
+  {"ext": "csv", "type": "text/csv"}
 ];
