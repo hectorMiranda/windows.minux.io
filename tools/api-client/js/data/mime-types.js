@@ -7,5 +7,6 @@ export const MIME_TYPES = [
   {"ext": "csv", "type": "text/csv"},
   {"ext": "css", "type": "text/css"},
   {"ext": "js", "type": "text/javascript"},
-  {"ext": "mjs", "type": "text/javascript"}
+  {"ext": "mjs", "type": "text/javascript"},
+  {"ext": "png", "type": "image/png"}
 ];
