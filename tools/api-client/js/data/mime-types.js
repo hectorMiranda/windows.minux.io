@@ -8,5 +8,6 @@ export const MIME_TYPES = [
   {"ext": "css", "type": "text/css"},
   {"ext": "js", "type": "text/javascript"},
   {"ext": "mjs", "type": "text/javascript"},
-  {"ext": "png", "type": "image/png"}
+  {"ext": "png", "type": "image/png"},
+  {"ext": "jpg", "type": "image/jpeg"}
 ];
