@@ -13,5 +13,6 @@ export const MIME_TYPES = [
   {"ext": "jpeg", "type": "image/jpeg"},
   {"ext": "gif", "type": "image/gif"},
   {"ext": "webp", "type": "image/webp"},
-  {"ext": "svg", "type": "image/svg+xml"}
+  {"ext": "svg", "type": "image/svg+xml"},
+  {"ext": "ico", "type": "image/x-icon"}
 ];
