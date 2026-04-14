@@ -16,5 +16,6 @@ export const MIME_TYPES = [
   {"ext": "svg", "type": "image/svg+xml"},
   {"ext": "ico", "type": "image/x-icon"},
   {"ext": "pdf", "type": "application/pdf"},
-  {"ext": "zip", "type": "application/zip"}
+  {"ext": "zip", "type": "application/zip"},
+  {"ext": "gz", "type": "application/gzip"}
 ];
