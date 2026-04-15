@@ -17,5 +17,6 @@ export const MIME_TYPES = [
   {"ext": "ico", "type": "image/x-icon"},
   {"ext": "pdf", "type": "application/pdf"},
   {"ext": "zip", "type": "application/zip"},
-  {"ext": "gz", "type": "application/gzip"}
+  {"ext": "gz", "type": "application/gzip"},
+  {"ext": "tar", "type": "application/x-tar"}
 ];
