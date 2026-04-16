@@ -18,5 +18,6 @@ export const MIME_TYPES = [
   {"ext": "pdf", "type": "application/pdf"},
   {"ext": "zip", "type": "application/zip"},
   {"ext": "gz", "type": "application/gzip"},
-  {"ext": "tar", "type": "application/x-tar"}
+  {"ext": "tar", "type": "application/x-tar"},
+  {"ext": "wasm", "type": "application/wasm"}
 ];
