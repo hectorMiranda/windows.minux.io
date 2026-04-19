@@ -20,5 +20,6 @@ export const MIME_TYPES = [
   {"ext": "gz", "type": "application/gzip"},
   {"ext": "tar", "type": "application/x-tar"},
   {"ext": "wasm", "type": "application/wasm"},
-  {"ext": "woff", "type": "font/woff"}
+  {"ext": "woff", "type": "font/woff"},
+  {"ext": "woff2", "type": "font/woff2"}
 ];
