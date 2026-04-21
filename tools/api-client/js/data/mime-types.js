@@ -23,5 +23,6 @@ export const MIME_TYPES = [
   {"ext": "woff", "type": "font/woff"},
   {"ext": "woff2", "type": "font/woff2"},
   {"ext": "ttf", "type": "font/ttf"},
-  {"ext": "otf", "type": "font/otf"}
+  {"ext": "otf", "type": "font/otf"},
+  {"ext": "mp3", "type": "audio/mpeg"}
 ];
