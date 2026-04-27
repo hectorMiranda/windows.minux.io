@@ -28,5 +28,6 @@ export const MIME_TYPES = [
   {"ext": "wav", "type": "audio/wav"},
   {"ext": "ogg", "type": "audio/ogg"},
   {"ext": "mp4", "type": "video/mp4"},
-  {"ext": "webm", "type": "video/webm"}
+  {"ext": "webm", "type": "video/webm"},
+  {"ext": "avi", "type": "video/x-msvideo"}
 ];
