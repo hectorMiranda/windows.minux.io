@@ -30,5 +30,6 @@ export const MIME_TYPES = [
   {"ext": "mp4", "type": "video/mp4"},
   {"ext": "webm", "type": "video/webm"},
   {"ext": "avi", "type": "video/x-msvideo"},
-  {"ext": "mov", "type": "video/quicktime"}
+  {"ext": "mov", "type": "video/quicktime"},
+  {"ext": "md", "type": "text/markdown"}
 ];
