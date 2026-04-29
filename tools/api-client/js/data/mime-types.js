@@ -31,5 +31,6 @@ export const MIME_TYPES = [
   {"ext": "webm", "type": "video/webm"},
   {"ext": "avi", "type": "video/x-msvideo"},
   {"ext": "mov", "type": "video/quicktime"},
-  {"ext": "md", "type": "text/markdown"}
+  {"ext": "md", "type": "text/markdown"},
+  {"ext": "yaml", "type": "application/yaml"}
 ];
