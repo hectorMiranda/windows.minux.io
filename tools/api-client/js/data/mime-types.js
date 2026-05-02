@@ -33,5 +33,6 @@ export const MIME_TYPES = [
   {"ext": "mov", "type": "video/quicktime"},
   {"ext": "md", "type": "text/markdown"},
   {"ext": "yaml", "type": "application/yaml"},
-  {"ext": "yml", "type": "application/yaml"}
+  {"ext": "yml", "type": "application/yaml"},
+  {"ext": "toml", "type": "application/toml"}
 ];
