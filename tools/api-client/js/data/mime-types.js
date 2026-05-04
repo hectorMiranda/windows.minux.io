@@ -36,5 +36,6 @@ export const MIME_TYPES = [
   {"ext": "yml", "type": "application/yaml"},
   {"ext": "toml", "type": "application/toml"},
   {"ext": "form", "type": "application/x-www-form-urlencoded"},
-  {"ext": "multipart", "type": "multipart/form-data"}
+  {"ext": "multipart", "type": "multipart/form-data"},
+  {"ext": "bin", "type": "application/octet-stream"}
 ];
