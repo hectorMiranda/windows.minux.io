@@ -38,5 +38,6 @@ export const MIME_TYPES = [
   {"ext": "form", "type": "application/x-www-form-urlencoded"},
   {"ext": "multipart", "type": "multipart/form-data"},
   {"ext": "bin", "type": "application/octet-stream"},
-  {"ext": "doc", "type": "application/msword"}
+  {"ext": "doc", "type": "application/msword"},
+  {"ext": "docx", "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
 ];
