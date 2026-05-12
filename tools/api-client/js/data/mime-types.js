@@ -44,5 +44,6 @@ export const MIME_TYPES = [
   {"ext": "xlsx", "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"},
   {"ext": "ppt", "type": "application/vnd.ms-powerpoint"},
   {"ext": "rtf", "type": "application/rtf"},
-  {"ext": "ndjson", "type": "application/x-ndjson"}
+  {"ext": "ndjson", "type": "application/x-ndjson"},
+  {"ext": "ics", "type": "text/calendar"}
 ];
