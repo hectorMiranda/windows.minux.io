@@ -45,5 +45,6 @@ export const MIME_TYPES = [
   {"ext": "ppt", "type": "application/vnd.ms-powerpoint"},
   {"ext": "rtf", "type": "application/rtf"},
   {"ext": "ndjson", "type": "application/x-ndjson"},
-  {"ext": "ics", "type": "text/calendar"}
+  {"ext": "ics", "type": "text/calendar"},
+  {"ext": "vcf", "type": "text/vcard"}
 ];
