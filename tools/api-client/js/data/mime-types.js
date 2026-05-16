@@ -47,5 +47,6 @@ export const MIME_TYPES = [
   {"ext": "ndjson", "type": "application/x-ndjson"},
   {"ext": "ics", "type": "text/calendar"},
   {"ext": "vcf", "type": "text/vcard"},
-  {"ext": "epub", "type": "application/epub+zip"}
+  {"ext": "epub", "type": "application/epub+zip"},
+  {"ext": "apk", "type": "application/vnd.android.package-archive"}
 ];
