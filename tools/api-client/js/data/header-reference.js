@@ -6,5 +6,6 @@ export const HEADER_REFERENCE = [
   {"name": "Cache-Control", "description": "Caching directives for requests and responses."},
   {"name": "Content-Type", "description": "The media type of the body."},
   {"name": "Content-Length", "description": "Size of the body in bytes."},
-  {"name": "Content-Encoding", "description": "Encoding applied to the body."}
+  {"name": "Content-Encoding", "description": "Encoding applied to the body."},
+  {"name": "Content-Disposition", "description": "How to display the body (inline/attachment)."}
 ];
