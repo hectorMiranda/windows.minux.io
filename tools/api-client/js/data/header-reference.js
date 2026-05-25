@@ -7,5 +7,6 @@ export const HEADER_REFERENCE = [
   {"name": "Content-Type", "description": "The media type of the body."},
   {"name": "Content-Length", "description": "Size of the body in bytes."},
   {"name": "Content-Encoding", "description": "Encoding applied to the body."},
-  {"name": "Content-Disposition", "description": "How to display the body (inline/attachment)."}
+  {"name": "Content-Disposition", "description": "How to display the body (inline/attachment)."},
+  {"name": "Cookie", "description": "Stored cookies previously set by the server."}
 ];
