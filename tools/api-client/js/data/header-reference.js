@@ -11,5 +11,6 @@ export const HEADER_REFERENCE = [
   {"name": "Cookie", "description": "Stored cookies previously set by the server."},
   {"name": "Set-Cookie", "description": "Server directive to store a cookie."},
   {"name": "Date", "description": "The date/time the message originated."},
-  {"name": "ETag", "description": "An identifier for a specific version of a resource."}
+  {"name": "ETag", "description": "An identifier for a specific version of a resource."},
+  {"name": "Expires", "description": "When the response is considered stale."}
 ];
