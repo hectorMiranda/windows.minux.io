@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "local",
+  "name": "Local",
+  "values": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "http://localhost:3000"
+    },
+    {
+      "enabled": true,
+      "key": "api_key",
+      "value": "dev-key"
+    }
+  ]
+}

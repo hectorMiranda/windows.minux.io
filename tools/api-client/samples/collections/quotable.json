@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "quotable",
+  "type": "collection",
+  "name": "Quotable",
+  "description": "Sample requests for Quotable.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://api.quotable.io"
+    }
+  ],
+  "children": [
+    {
+      "id": "random-quote",
+      "type": "request",
+      "name": "Random quote",
+      "method": "GET",
+      "url": "{{base_url}}/random",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "list-quotes",
+      "type": "request",
+      "name": "List quotes",
+      "method": "GET",
+      "url": "{{base_url}}/quotes",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

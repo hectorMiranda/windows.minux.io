@@ -1,0 +1,8 @@
+:root{
+  --font-ui:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  --font-mono:'Cascadia Code','JetBrains Mono',Consolas,'SF Mono',monospace;
+  --radius:8px; --radius-sm:5px;
+  --space:8px; --space-2:16px; --space-3:24px;
+  --transition:140ms ease;
+  --sidebar-w:280px;
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "staging",
+  "name": "Staging",
+  "values": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://staging.api.example.com"
+    },
+    {
+      "enabled": true,
+      "key": "api_key",
+      "value": "{{STAGING_KEY}}"
+    }
+  ]
+}

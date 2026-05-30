@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "coingecko",
+  "type": "collection",
+  "name": "CoinGecko",
+  "description": "Sample requests for CoinGecko.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://api.coingecko.com/api/v3"
+    }
+  ],
+  "children": [
+    {
+      "id": "ping",
+      "type": "request",
+      "name": "Ping",
+      "method": "GET",
+      "url": "{{base_url}}/ping",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "price",
+      "type": "request",
+      "name": "Price",
+      "method": "GET",
+      "url": "{{base_url}}/simple/price?ids=bitcoin&vs_currencies=usd",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "coins",
+      "type": "request",
+      "name": "Coins",
+      "method": "GET",
+      "url": "{{base_url}}/coins/list",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

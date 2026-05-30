@@ -1,0 +1,9 @@
+/* Solarized Dark theme */
+[data-theme="solarized"]{
+  --bg:#002b36; --surface:#073642; --border:#0a4a5a;
+  --fg:#eee8d5; --fg-dim:#93a1a1;
+  --accent:#2aa198;
+  --input:#002b36; --btn:#073642; --btn-hover:#0a4a5a;
+  --m-get:#859900; --m-post:#b58900; --m-put:#268bd2; --m-patch:#6c71c4; --m-delete:#dc322f;
+  --ok:#859900; --warn:#b58900; --err:#dc322f;
+}

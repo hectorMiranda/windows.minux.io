@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "production",
+  "name": "Production",
+  "values": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://api.example.com"
+    },
+    {
+      "enabled": true,
+      "key": "api_key",
+      "value": "{{PROD_KEY}}"
+    }
+  ]
+}

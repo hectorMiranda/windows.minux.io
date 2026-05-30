@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Minux API Studio</title>
+<link rel="icon" href="assets/icon.svg"/>
+<link rel="stylesheet" href="css/reset.css"/>
+<link rel="stylesheet" href="css/variables.css"/>
+<link rel="stylesheet" href="css/themes/dark.css"/>
+<link rel="stylesheet" href="css/themes/light.css"/>
+<link rel="stylesheet" href="css/layout.css"/>
+<link rel="stylesheet" href="css/components.css"/>
+<link rel="stylesheet" href="css/code.css"/>
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <strong>Minux&nbsp;API&nbsp;Studio</strong>
+    <button class="btn" id="btn-new-request" title="New request (Ctrl+N)">+ Request</button>
+    <select class="select" id="env-select" style="width:auto" title="Active environment"></select>
+    <span style="flex:1"></span>
+    <select class="select" id="theme-select" style="width:auto" title="Theme"></select>
+  </header>
+  <aside class="sidebar" id="sidebar"></aside>
+  <main class="main" id="main" style="align-items:stretch;justify-content:flex-start"></main>
+  <footer class="statusbar" id="statusbar"><span id="status-msg">Ready.</span></footer>
+</div>
+<div class="toast-wrap" id="toasts"></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

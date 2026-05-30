@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "openlibrary",
+  "type": "collection",
+  "name": "Open Library",
+  "description": "Sample requests for Open Library.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://openlibrary.org"
+    }
+  ],
+  "children": [
+    {
+      "id": "search",
+      "type": "request",
+      "name": "Search",
+      "method": "GET",
+      "url": "{{base_url}}/search.json?q=dune",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "book",
+      "type": "request",
+      "name": "Book",
+      "method": "GET",
+      "url": "{{base_url}}/isbn/9780441013593.json",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

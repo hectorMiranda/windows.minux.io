@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "numbersapi",
+  "type": "collection",
+  "name": "Numbers API",
+  "description": "Sample requests for Numbers API.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "http://numbersapi.com"
+    }
+  ],
+  "children": [
+    {
+      "id": "trivia",
+      "type": "request",
+      "name": "Trivia",
+      "method": "GET",
+      "url": "{{base_url}}/42",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "date-fact",
+      "type": "request",
+      "name": "Date fact",
+      "method": "GET",
+      "url": "{{base_url}}/2/29/date",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

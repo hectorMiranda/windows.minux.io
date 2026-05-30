@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "catfacts",
+  "type": "collection",
+  "name": "Cat Facts",
+  "description": "Sample requests for Cat Facts.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://catfact.ninja"
+    }
+  ],
+  "children": [
+    {
+      "id": "random-fact",
+      "type": "request",
+      "name": "Random fact",
+      "method": "GET",
+      "url": "{{base_url}}/fact",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "list-facts",
+      "type": "request",
+      "name": "List facts",
+      "method": "GET",
+      "url": "{{base_url}}/facts",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "breeds",
+      "type": "request",
+      "name": "Breeds",
+      "method": "GET",
+      "url": "{{base_url}}/breeds",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

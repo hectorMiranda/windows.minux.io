@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "genderize",
+  "type": "collection",
+  "name": "Genderize",
+  "description": "Sample requests for Genderize.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://api.genderize.io"
+    }
+  ],
+  "children": [
+    {
+      "id": "predict-gender",
+      "type": "request",
+      "name": "Predict gender",
+      "method": "GET",
+      "url": "{{base_url}}/?name=alex",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

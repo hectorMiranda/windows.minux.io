@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "reqres",
+  "type": "collection",
+  "name": "ReqRes",
+  "description": "Sample requests for ReqRes.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://reqres.in/api"
+    }
+  ],
+  "children": [
+    {
+      "id": "list-users",
+      "type": "request",
+      "name": "List users",
+      "method": "GET",
+      "url": "{{base_url}}/users?page=2",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "single-user",
+      "type": "request",
+      "name": "Single user",
+      "method": "GET",
+      "url": "{{base_url}}/users/2",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "create",
+      "type": "request",
+      "name": "Create",
+      "method": "POST",
+      "url": "{{base_url}}/users",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "login",
+      "type": "request",
+      "name": "Login",
+      "method": "POST",
+      "url": "{{base_url}}/login",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

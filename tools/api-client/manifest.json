@@ -1,0 +1,10 @@
+{
+  "name": "Minux API Studio",
+  "short_name": "API Studio",
+  "version": "0.1.0",
+  "description": "A Postman-class HTTP & API workbench for the Minux platform.",
+  "schemaVersion": 1,
+  "entry": "index.html",
+  "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }],
+  "categories": ["developer-tools", "http", "api"]
+}

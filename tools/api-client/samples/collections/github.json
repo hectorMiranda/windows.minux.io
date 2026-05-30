@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "github",
+  "type": "collection",
+  "name": "GitHub REST",
+  "description": "Common GitHub API calls.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://api.github.com"
+    }
+  ],
+  "children": [
+    {
+      "id": "get-user",
+      "type": "request",
+      "name": "Get user",
+      "method": "GET",
+      "url": "{{base_url}}/users/octocat",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "list-repos",
+      "type": "request",
+      "name": "List repos",
+      "method": "GET",
+      "url": "{{base_url}}/users/octocat/repos",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "get-repo",
+      "type": "request",
+      "name": "Get repo",
+      "method": "GET",
+      "url": "{{base_url}}/repos/torvalds/linux",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "search-repos",
+      "type": "request",
+      "name": "Search repos",
+      "method": "GET",
+      "url": "{{base_url}}/search/repositories?q=minux",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "boredapi",
+  "type": "collection",
+  "name": "Bored API",
+  "description": "Sample requests for Bored API.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://www.boredapi.com/api"
+    }
+  ],
+  "children": [
+    {
+      "id": "activity",
+      "type": "request",
+      "name": "Activity",
+      "method": "GET",
+      "url": "{{base_url}}/activity",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

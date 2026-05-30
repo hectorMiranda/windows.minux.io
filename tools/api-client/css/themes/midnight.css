@@ -1,0 +1,9 @@
+/* Midnight theme */
+[data-theme="midnight"]{
+  --bg:#05070d; --surface:#0a0f1a; --border:#141d2e;
+  --fg:#cdd9ec; --fg-dim:#7184a0;
+  --accent:#7c5cff;
+  --input:#070b14; --btn:#111a2b; --btn-hover:#19243a;
+  --m-get:#54d6a6; --m-post:#e6c463; --m-put:#6f9bff; --m-patch:#b98cff; --m-delete:#ff6f7d;
+  --ok:#54d6a6; --warn:#e6c463; --err:#ff6f7d;
+}

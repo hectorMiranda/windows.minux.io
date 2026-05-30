@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "weather",
+  "type": "collection",
+  "name": "Open-Meteo",
+  "description": "Sample requests for Open-Meteo.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://api.open-meteo.com/v1"
+    }
+  ],
+  "children": [
+    {
+      "id": "forecast",
+      "type": "request",
+      "name": "Forecast",
+      "method": "GET",
+      "url": "{{base_url}}/forecast?latitude=52.52&longitude=13.41&current_weather=true",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

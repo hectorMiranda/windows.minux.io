@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "httpbin",
+  "name": "httpbin.org",
+  "values": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://httpbin.org"
+    }
+  ]
+}

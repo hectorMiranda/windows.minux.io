@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "ipify",
+  "type": "collection",
+  "name": "IPify",
+  "description": "Sample requests for IPify.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://api.ipify.org"
+    }
+  ],
+  "children": [
+    {
+      "id": "my-ip",
+      "type": "request",
+      "name": "My IP",
+      "method": "GET",
+      "url": "{{base_url}}/?format=json",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

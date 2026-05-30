@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "restcountries",
+  "type": "collection",
+  "name": "REST Countries",
+  "description": "Sample requests for REST Countries.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://restcountries.com/v3.1"
+    }
+  ],
+  "children": [
+    {
+      "id": "all",
+      "type": "request",
+      "name": "All",
+      "method": "GET",
+      "url": "{{base_url}}/all",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "by-name",
+      "type": "request",
+      "name": "By name",
+      "method": "GET",
+      "url": "{{base_url}}/name/mexico",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "by-code",
+      "type": "request",
+      "name": "By code",
+      "method": "GET",
+      "url": "{{base_url}}/alpha/us",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}

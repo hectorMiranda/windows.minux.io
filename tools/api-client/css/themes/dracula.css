@@ -1,0 +1,9 @@
+/* Dracula theme */
+[data-theme="dracula"]{
+  --bg:#282a36; --surface:#21222c; --border:#343746;
+  --fg:#f8f8f2; --fg-dim:#9aa0b5;
+  --accent:#bd93f9;
+  --input:#1e1f29; --btn:#343746; --btn-hover:#3d4153;
+  --m-get:#50fa7b; --m-post:#f1fa8c; --m-put:#8be9fd; --m-patch:#ff79c6; --m-delete:#ff5555;
+  --ok:#50fa7b; --warn:#f1fa8c; --err:#ff5555;
+}

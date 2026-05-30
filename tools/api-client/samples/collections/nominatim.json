@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "nominatim",
+  "type": "collection",
+  "name": "Nominatim",
+  "description": "Sample requests for Nominatim.",
+  "variables": [
+    {
+      "enabled": true,
+      "key": "base_url",
+      "value": "https://nominatim.openstreetmap.org"
+    }
+  ],
+  "children": [
+    {
+      "id": "search",
+      "type": "request",
+      "name": "Search",
+      "method": "GET",
+      "url": "{{base_url}}/search?q=eiffel+tower&format=json",
+      "params": [],
+      "headers": [],
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      }
+    }
+  ]
+}
