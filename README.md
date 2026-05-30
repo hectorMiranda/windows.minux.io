@@ -39,7 +39,24 @@ A sophisticated, touch-enabled control center for Minux RTOS with modern Windows
 
 ## 📦 Building the Application
 
-### Quick Build (Recommended)
+### One-Click Build & Run (Easiest)
+Double-click **`run.bat`** (or run it from a terminal). It builds the app the
+first time and then launches it — no Developer Command Prompt, no PATH setup:
+
+```bat
+run.bat            :: build if needed, then launch
+run.bat /rebuild   :: force a fresh build, then launch
+build.bat          :: build, then launch
+build.bat /norun   :: build only (for CI / scripts)
+```
+
+`build.bat` auto-detects a toolchain in this order and works from a plain
+shell: it resolves **MSBuild** through `vswhere` (so Visual Studio builds
+without the Developer Command Prompt) and falls back to **MinGW g++**,
+auto-adding the WinLibs install to `PATH`, then to **Clang**. The executable is
+written to `build\MinuxRTOS.exe`.
+
+### Quick Build (PowerShell)
 Use the included PowerShell build script for automatic compiler detection:
 
 ```powershell
