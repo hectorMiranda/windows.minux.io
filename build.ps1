@@ -32,8 +32,8 @@ Write-Host "Minux RTOS Control Center - Build System" -ForegroundColor Cyan
 Write-Host "==========================================" -ForegroundColor Cyan
 
 # Check if we're in the right directory
-if (!(Test-Path "main.cpp")) {
-    Write-Host "Error: main.cpp not found. Please run from the project root directory." -ForegroundColor Red
+if (!(Test-Path "rtos\rtos.cpp")) {
+    Write-Host "Error: rtos\rtos.cpp not found. Please run from the project root directory." -ForegroundColor Red
     exit 1
 }
 
@@ -106,9 +106,9 @@ if ($Compiler -eq "auto") {
 Write-Host "Using compiler: $Compiler" -ForegroundColor Green
 Write-Host "Configuration: $Configuration" -ForegroundColor Green
 
-# Define common source files
-$sourceFiles = @("main.cpp", "minux_system.cpp")
-$headerFiles = @("minux_ui.h")
+# The buildable app lives in the rtos\ project (rtos.cpp + minux_system.cpp + rtos.rc).
+# The root main.cpp / minux_system.cpp set does NOT compile, so it is intentionally unused.
+$sourceFiles = @("rtos\rtos.cpp", "rtos\minux_system.cpp")
 
 # Verify source files exist
 foreach ($file in $sourceFiles) {
@@ -127,28 +127,35 @@ switch ($Compiler) {
         
         # Check for solution file
         if (Test-Path "windows.minux.io.sln") {
+            # msbuild is usually NOT on PATH outside the Developer prompt; resolve it via vswhere.
             $msbuildCmd = "msbuild"
+            $vsWhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+            if (Test-Path $vsWhere) {
+                $found = & $vsWhere -latest -requires Microsoft.Component.MSBuild -find "MSBuild\**\Bin\MSBuild.exe" |
+                         Select-Object -First 1
+                if ($found) { $msbuildCmd = $found }
+            }
+
             $msbuildArgs = @(
                 "windows.minux.io.sln",
                 "/p:Configuration=$Configuration",
                 "/p:Platform=x64",
                 "/verbosity:minimal"
             )
-            
+
             if ($Verbose) {
                 $msbuildArgs[-1] = "/verbosity:normal"
             }
-            
+
             Write-Host "Command: $msbuildCmd $($msbuildArgs -join ' ')" -ForegroundColor Gray
             & $msbuildCmd $msbuildArgs
-            
-            if ($LASTEXITCODE -eq 0) {
+
+            # MSBuild emits rtos.exe; copy it to the common build\ output and only then call it a success.
+            $outputPath = "x64\$Configuration\rtos.exe"
+            if (($LASTEXITCODE -eq 0) -and (Test-Path $outputPath)) {
+                Copy-Item $outputPath "build\MinuxRTOS.exe" -Force
+                Write-Host "Executable copied to build\MinuxRTOS.exe" -ForegroundColor Green
                 $buildSuccess = $true
-                $outputPath = "x64\$Configuration\rtos.exe"
-                if (Test-Path $outputPath) {
-                    Copy-Item $outputPath "build\MinuxRTOS.exe" -Force
-                    Write-Host "Executable copied to build\MinuxRTOS.exe" -ForegroundColor Green
-                }
             }
         } else {
             Write-Host "Error: Visual Studio solution file not found!" -ForegroundColor Red
@@ -157,77 +164,83 @@ switch ($Compiler) {
     
     "mingw" {
         Write-Host "Building with MinGW..." -ForegroundColor Yellow
-        
-        $gccCmd = "g++"
-        $gccArgs = @(
-            "-std=c++17",
-            "-O2",
-            "-mwindows",
-            "-static-libgcc",
-            "-static-libstdc++",
-            "-DUNICODE",
-            "-D_UNICODE", 
-            "-DWINVER=0x0A00",
-            "-D_WIN32_WINNT=0x0A00",
-            "-DWIN32_LEAN_AND_MEAN",
-            "-DMINUX_VERSION=`"2.1.0`"",
-            $sourceFiles,
-            "-o", "build\MinuxRTOS.exe",
-            "-luser32", "-lgdi32", "-ldwmapi", "-lcomctl32", 
-            "-luxtheme", "-lshell32", "-lpsapi", "-lpdh", 
-            "-liphlpapi", "-ladvapi32"
-        )
-        
-        if ($Configuration -eq "Debug") {
-            $gccArgs = @("-g", "-O0") + $gccArgs[2..($gccArgs.Length-1)]
-        }
-        
-        if ($Verbose) {
-            $gccArgs = @("-v") + $gccArgs
-        }
-        
-        Write-Host "Command: $gccCmd $($gccArgs -join ' ')" -ForegroundColor Gray
-        & $gccCmd $gccArgs
-        
-        if ($LASTEXITCODE -eq 0) {
-            $buildSuccess = $true
+
+        $opt     = if ($Configuration -eq "Debug") { @("-O0", "-g") } else { @("-O2") }
+        $defines = @("-DUNICODE", "-D_UNICODE", "-DWINVER=0x0A00", "-D_WIN32_WINNT=0x0A00", "-DNOMINMAX")
+        $libs    = @("-luser32", "-lgdi32", "-ldwmapi", "-lcomctl32", "-luxtheme", "-lshell32",
+                     "-lpsapi", "-lpdh", "-liphlpapi", "-ladvapi32", "-lole32")
+
+        # Build runs from inside rtos\ so the .rc's relative #includes and icon paths resolve.
+        Push-Location "rtos"
+        try {
+            # rtos.rc is UTF-16; convert to a UTF-8 temp copy so windres (GNU binutils) can parse it.
+            $rcText    = Get-Content "rtos.rc" -Raw -Encoding Unicode
+            $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+            [System.IO.File]::WriteAllText((Join-Path (Get-Location) "rtos_utf8.rc"), $rcText, $utf8NoBom)
+
+            Write-Host "Compiling resources (icon/menu/dialog)..." -ForegroundColor Gray
+            & windres "rtos_utf8.rc" -O coff -o "..\build\rtos_res.o"
+            $resExit = $LASTEXITCODE
+            Remove-Item "rtos_utf8.rc" -Force -ErrorAction SilentlyContinue
+
+            if ($resExit -ne 0) {
+                Write-Host "Resource compilation failed (windres). Is it on PATH?" -ForegroundColor Red
+            } else {
+                # rtos.cpp uses wWinMain, so -municode is required (else 'undefined reference to WinMain').
+                $gccArgs = @("-std=c++17") + $opt +
+                    @("-municode", "-mwindows", "-static-libgcc", "-static-libstdc++") +
+                    $defines +
+                    @("rtos.cpp", "minux_system.cpp", "..\build\rtos_res.o", "-o", "..\build\MinuxRTOS.exe") +
+                    $libs
+                if ($Verbose) { $gccArgs = @("-v") + $gccArgs }
+
+                Write-Host "Command: g++ $($gccArgs -join ' ')" -ForegroundColor Gray
+                & g++ $gccArgs
+                if ($LASTEXITCODE -eq 0) { $buildSuccess = $true }
+            }
+        } finally {
+            Pop-Location
         }
     }
-    
+
     "clang" {
         Write-Host "Building with Clang..." -ForegroundColor Yellow
-        
-        $clangCmd = "clang++"
-        $clangArgs = @(
-            "-std=c++17",
-            "-O2",
-            "-target", "x86_64-pc-windows-msvc",
-            "-DUNICODE",
-            "-D_UNICODE",
-            "-DWINVER=0x0A00",
-            "-D_WIN32_WINNT=0x0A00",
-            "-DWIN32_LEAN_AND_MEAN",
-            "-DMINUX_VERSION=`"2.1.0`"",
-            $sourceFiles,
-            "-o", "build\MinuxRTOS.exe",
-            "-luser32", "-lgdi32", "-ldwmapi", "-lcomctl32",
-            "-luxtheme", "-lshell32", "-lpsapi", "-lpdh",
-            "-liphlpapi", "-ladvapi32"
-        )
-        
-        if ($Configuration -eq "Debug") {
-            $clangArgs = @("-g", "-O0") + $clangArgs[2..($clangArgs.Length-1)]
-        }
-        
-        if ($Verbose) {
-            $clangArgs = @("-v") + $clangArgs
-        }
-        
-        Write-Host "Command: $clangCmd $($clangArgs -join ' ')" -ForegroundColor Gray
-        & $clangCmd $clangArgs
-        
-        if ($LASTEXITCODE -eq 0) {
-            $buildSuccess = $true
+
+        $opt     = if ($Configuration -eq "Debug") { @("-O0", "-g") } else { @("-O2") }
+        $defines = @("-DUNICODE", "-D_UNICODE", "-DWINVER=0x0A00", "-D_WIN32_WINNT=0x0A00", "-DNOMINMAX")
+        $libs    = @("-luser32", "-lgdi32", "-ldwmapi", "-lcomctl32", "-luxtheme", "-lshell32",
+                     "-lpsapi", "-lpdh", "-liphlpapi", "-ladvapi32", "-lole32")
+
+        # Targets the MinGW (windows-gnu) runtime so -municode / -mwindows / windres .o all apply,
+        # matching the verified g++ path. Requires clang configured with a MinGW sysroot.
+        Push-Location "rtos"
+        try {
+            $rcText    = Get-Content "rtos.rc" -Raw -Encoding Unicode
+            $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+            [System.IO.File]::WriteAllText((Join-Path (Get-Location) "rtos_utf8.rc"), $rcText, $utf8NoBom)
+
+            Write-Host "Compiling resources (icon/menu/dialog)..." -ForegroundColor Gray
+            & windres "rtos_utf8.rc" -O coff -o "..\build\rtos_res.o"
+            $resExit = $LASTEXITCODE
+            Remove-Item "rtos_utf8.rc" -Force -ErrorAction SilentlyContinue
+
+            if ($resExit -ne 0) {
+                Write-Host "Resource compilation failed (windres). Is it on PATH?" -ForegroundColor Red
+            } else {
+                $clangArgs = @("-std=c++17") + $opt +
+                    @("-target", "x86_64-pc-windows-gnu", "-municode", "-mwindows",
+                      "-static-libgcc", "-static-libstdc++") +
+                    $defines +
+                    @("rtos.cpp", "minux_system.cpp", "..\build\rtos_res.o", "-o", "..\build\MinuxRTOS.exe") +
+                    $libs
+                if ($Verbose) { $clangArgs = @("-v") + $clangArgs }
+
+                Write-Host "Command: clang++ $($clangArgs -join ' ')" -ForegroundColor Gray
+                & clang++ $clangArgs
+                if ($LASTEXITCODE -eq 0) { $buildSuccess = $true }
+            }
+        } finally {
+            Pop-Location
         }
     }
     
